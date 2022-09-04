@@ -24,7 +24,6 @@ function Index() {
   return (
     <>
       <IndexNavbar />
-   
       <IndexHeader />
       <div className="main">
         <SignUp />
