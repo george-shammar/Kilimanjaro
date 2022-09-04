@@ -22,7 +22,14 @@ function IndexHeader() {
           <Container>
             
             <div className="title-brand">
-              <h1 className="presentation-title">Kilimanjaro</h1>
+            
+            <h2 className="text-center">
+            Regenerative Finance (ReFi)
+            </h2>
+            <h2 className="presentation-subtitle text-center">
+            with
+            </h2>
+              <h1 className="presentation-title"><span className="green">Kili</span>manjaro</h1>
               <div className="fog-low">
                 <img alt="..." src={require("../../assets/img/fog-low.png")} />
               </div>
@@ -30,9 +37,7 @@ function IndexHeader() {
                 <img alt="..." src={require("../../assets/img/fog-low.png")} />
               </div>
             </div>
-            <h2 className="presentation-subtitle text-center">
-              Regenarative Finance (ReFi)
-            </h2>
+            
           </Container>
         </div>
         <div
