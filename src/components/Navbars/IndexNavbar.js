@@ -1,5 +1,6 @@
 
 import React from "react";
+import "../../assets/css/custom.css"
 // nodejs library that concatenates strings
 import classnames from "classnames";
 // reactstrap components
