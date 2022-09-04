@@ -20,9 +20,7 @@ function IndexHeader() {
         <div className="filter" />
         <div className="content-center">
           <Container>
-            <h2 className="presentation-subtitle text-center">
-              Regenarative Finance (ReFi) with
-            </h2>
+            
             <div className="title-brand">
               <h1 className="presentation-title">Kilimanjaro</h1>
               <div className="fog-low">
@@ -32,7 +30,9 @@ function IndexHeader() {
                 <img alt="..." src={require("../../assets/img/fog-low.png")} />
               </div>
             </div>
-            
+            <h2 className="presentation-subtitle text-center">
+              Regenarative Finance (ReFi)
+            </h2>
           </Container>
         </div>
         <div
