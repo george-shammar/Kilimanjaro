@@ -34,5 +34,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "bootstrap": "4.6.0",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.9"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "description": "A Regenerative Finance (ReFi) application at the intersection of climate change and the blockchain technology. Developed for the EthSafari Blockchain Hackathon.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/george-shammar/Kilimanjaro"
   }
 }
