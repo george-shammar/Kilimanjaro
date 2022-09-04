@@ -10,9 +10,9 @@ import "./assets/demo/demo.css?v=1.3.0";
 // pages
 import Index from "./views/Index.js";
 import NucleoIcons from "./views/NucleoIcons.js";
-import LandingPage from "./views/examples/LandingPage.js";
-import ProfilePage from "./views/examples/ProfilePage.js";
-import RegisterPage from "./views/examples/RegisterPage.js";
+// import LandingPage from "./views/examples/LandingPage.js";
+// import ProfilePage from "./views/examples/ProfilePage.js";
+// import RegisterPage from "./views/examples/RegisterPage.js";
 // others
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -25,7 +25,7 @@ root.render(
         path="/nucleo-icons"
         render={(props) => <NucleoIcons {...props} />}
       />
-      <Route
+      {/* <Route
         path="/landing-page"
         render={(props) => <LandingPage {...props} />}
       />
@@ -36,7 +36,7 @@ root.render(
       <Route
         path="/register-page"
         render={(props) => <RegisterPage {...props} />}
-      />
+      /> */}
       <Redirect to="/index" />
     </Switch>
   </BrowserRouter>
