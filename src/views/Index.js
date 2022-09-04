@@ -9,6 +9,7 @@ import IndexHeader from "../components/Headers/IndexHeader.js";
 import DemoFooter from "../components/Footers/DemoFooter.js";
 // index sections
 import SignUp from "../views/index-sections/SignUp.js";
+import Download from "../views/index-sections/Download.js";
 
 
 function Index() {
@@ -25,6 +26,7 @@ function Index() {
       <IndexHeader />
       <div className="main">
         <SignUp />
+        <Download />
         <DemoFooter />
       </div>
     </>
