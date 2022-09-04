@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from 'react-router-dom';
 import "../../assets/css/custom.css"
 // nodejs library that concatenates strings
 import classnames from "classnames";
@@ -133,7 +134,7 @@ function IndexNavbar() {
                 href=""
                 target="_blank"
               >
-                <i className="nc-icon nc-spaceship"></i> Get Started
+                Get Started
               </Button>
             </NavItem>
           </Nav>
