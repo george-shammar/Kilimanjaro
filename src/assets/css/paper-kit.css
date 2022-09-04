@@ -6349,14 +6349,14 @@ License - nucleoapp.com/license/
   font-size: 8em;
   font-weight: 700;
   margin: 0;
-  color: #ffffff;
+  /* color: #ffffff;
   background: #fbf8ec;
   background: -moz-linear-gradient(top, #ffffff 35%, #4e6773 100%);
   background: -webkit-linear-gradient(top, #ffffff 35%, #4e6773 100%);
   background: -ms-linear-gradient(top, #ffffff 35%, #4e6773 100%);
   background: linear-gradient(to bottom, #ffffff 35%, #4e6773 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 .presentation-subtitle {

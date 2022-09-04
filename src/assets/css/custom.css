@@ -5,3 +5,12 @@
 .darker {
   background-color: black;
 }
+
+.green {
+  color: green;
+}
+
+.main-header {
+  font-size: 8em;
+  font-weight: 700;
+}

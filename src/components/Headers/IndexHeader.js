@@ -1,6 +1,7 @@
 
 /*eslint-disable*/
 import React from "react";
+import "../../assets/css/custom.css"
 
 // reactstrap components
 import { Container } from "reactstrap";
@@ -29,7 +30,7 @@ function IndexHeader() {
             <h2 className="presentation-subtitle text-center">
             with
             </h2>
-              <h1 className="presentation-title"><span className="green">Kili</span>manjaro</h1>
+              <h1 className="main-header"><span className="green">Kili</span>manjaro</h1>
               <div className="fog-low">
                 <img alt="..." src={require("../../assets/img/fog-low.png")} />
               </div>
