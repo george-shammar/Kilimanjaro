@@ -51,8 +51,7 @@ function IndexNavbar() {
           <NavbarBrand
             data-placement="bottom"
             href="/index"
-            target="_blank"
-            title="Coded by Creative Tim"
+            title="ReFi"
           >
             Kilimanjaro
           </NavbarBrand>
