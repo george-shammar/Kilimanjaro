@@ -20,8 +20,6 @@ function Download() {
               <h3 className="title">dfgdfgdfgdfgdfdfgdfgdrfgdfd</h3>
               <h5 className="description">
                 dfdfdgfdhfhfdffffffffffffffffffffffffffffhdfdhfhdfhdfdfhdfhdfhdfhdfhdfhdfhdfhdfd
-                dhfhdffdddddddddddfgdhdfhddfdfghdgfyhretyrturytyutiyrirtyuirtyuityoiotyuoiyuioyui
-                tdyhrftujrfhjgfhjgyhdfcghdfghdftgdhfghdfghdfghdfghdfghdfg.
               </h5>
             </Col>
             <Col className="text-center" lg="8" md="12">
@@ -61,9 +59,9 @@ function Download() {
                 >
                   dsfgdfghdfgdhfghdfghdf
                 </a>
-                kjhgkjyghkjhgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkhkjhgkjh
-                kjyghkjhhhhhhhhhhhgkhgkjhgkjhgkjhkjhkjkjhgkjhgkjhkjghkjhjkhgkjhkjghkjgkjhgkjyhgjyhghjgkjhgkhjgkhj
-                ,jvhgkjhgkjhkjhkjhgkjh.
+                kjhgkjyghkjhgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkgkg
+                UncontrolledTooltip UncontrolledTooltip UncontrolledTooltip
+                
               </h5>
             </Col>
             <Col md="12">
@@ -139,6 +137,8 @@ function Download() {
                 Star on Github
               </UncontrolledTooltip>
             </Col>
+
+
           </Row>
         </Container>
       </div>
