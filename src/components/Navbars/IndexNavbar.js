@@ -127,7 +127,7 @@ function IndexNavbar() {
                 <i className="nc-icon nc-book-bookmark" /> DOCS
               </NavLink>
             </NavItem>
-            <NavItem>
+            <Link to="/MainPage"><NavItem>
               <Button
                 className="btn-round"
                 color="danger"
@@ -136,7 +136,7 @@ function IndexNavbar() {
               >
                 Get Started
               </Button>
-            </NavItem>
+            </NavItem></Link>
           </Nav>
         </Collapse>
       </Container>
