@@ -8,7 +8,6 @@ import {
   Button,
   Collapse,
   NavbarBrand,
-  Navbar,
   NavItem
 } from "reactstrap";
 
