@@ -6,7 +6,6 @@ import "../../assets/css/custom.css"
 // reactstrap components
 import {
   Button,
-  Collapse,
   NavItem
 } from "reactstrap";
 
