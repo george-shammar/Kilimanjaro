@@ -1,12 +1,13 @@
 
 import React from "react";
+import "../../assets/css/custom.css"
 
 // reactstrap components
 import { Row, Container } from "reactstrap";
 
 function DemoFooter() {
   return (
-    <footer className="footer footer-black footer-white">
+    <footer className="footer footer-black footer-white darker">
       <Container>
         <Row>
           <nav className="footer-nav">
