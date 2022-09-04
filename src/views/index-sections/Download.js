@@ -1,4 +1,5 @@
 import React from "react";
+import "../../assets/css/custom.css"
 
 // reactstrap components
 import { Button, Container, Row, Col, UncontrolledTooltip } from "reactstrap";
@@ -9,7 +10,7 @@ function Download() {
   return (
     <>
       <div
-        className="section section-download"
+        className="section section-download dark"
         data-background-color="black"
         id="download-section"
       >
