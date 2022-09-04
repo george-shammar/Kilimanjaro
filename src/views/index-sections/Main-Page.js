@@ -9,8 +9,7 @@ import {
   Collapse,
   NavbarBrand,
   Navbar,
-  NavItem,
-  NavLink
+  NavItem
 } from "reactstrap";
 
 
