@@ -20,6 +20,8 @@ contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
     string geoLocation;
     string longitude;
     string latitude;
-    uint256 CO2Locked;
+    uint256 CO2Credit;
   }
+
+  event NewTree(uint256 id, string species, uint256 datePlanted, string geoLocation, string longitude, string latitude, uint256 CO2Credit);
 }
