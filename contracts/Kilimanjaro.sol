@@ -30,4 +30,16 @@ contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
   constructor(address _rewardsToken)ERC721("Kilimanjaro", "KLM"){
     rewardsToken = IERC20(_rewardsToken);
   }
+
+  // Create
+  function _createTree(string memory _species, string memory tokenURI, uint256 _datePlanted, string memory _geoLocation, string memory longitude, string memory latitude, uint256 CO2Credit) internal {
+        Tree memory newTree = Tree(COUNTER, _species, _datePlanted, _geoLocation, longitude, latitude, 0);
+        trees.push(newTree);
+        _safeMint(msg.sender, COUNTER);
+        _setTokenURI(COUNTER, tokenURI);
+        emit NewTree(COUNTER, _species, _datePlanted, _geoLocation, longitude, latitude, CO2Credit);
+        COUNTER++;
+  }
+
+
 }
