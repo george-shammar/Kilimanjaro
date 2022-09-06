@@ -12,4 +12,14 @@ contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
   uint256 COUNTER;
   using SafeERC20 for IERC20;
   IERC20 public rewardsToken;
+
+  struct Tree {
+    uint256 id;
+    string species;
+    uint256 datePlanted;
+    string geoLocation;
+    string longitude;
+    string latitude;
+    uint256 CO2Locked;
+  }
 }
