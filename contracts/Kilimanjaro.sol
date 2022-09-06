@@ -10,4 +10,6 @@ import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 
 contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
   uint256 COUNTER;
+  using SafeERC20 for IERC20;
+  IERC20 public rewardsToken;
 }
