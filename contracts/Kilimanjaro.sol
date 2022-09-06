@@ -50,5 +50,17 @@ contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
         return trees;
   }
 
+  function getOwnerTrees(address _owner) public view returns (Tree[] memory) {
+        Tree[] memory result = new Tree[](balanceOf(_owner));
+        uint256 counter = 0;
+        for (uint256 i = 0; i < trees.length; i++) {
+        if (ownerOf(i) == _owner) {
+            result[counter] = trees[i];
+            counter++;
+        }
+        }
+        return result;
+  }
+
 
 }
