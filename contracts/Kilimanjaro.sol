@@ -45,6 +45,10 @@ contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
       _createTree(_species, tokenURI, _datePlanted, _geoLocation, longitude, latitude, 0);
   }
 
+  function reward(address farmer, uint256 wt) public {
+    rewardsToken.safeTransfer(farmer, wt);
+  }
+
   // Getters
   function getTrees() public view returns (Tree[] memory) {
         return trees;
@@ -70,6 +74,8 @@ contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
   function unpause() public onlyOwner {
     _unpause();
   }
+
+
 
 
 }
