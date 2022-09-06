@@ -67,5 +67,9 @@ contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
     _pause();
   }
 
+  function unpause() public onlyOwner {
+    _unpause();
+  }
+
 
 }
