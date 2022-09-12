@@ -45,12 +45,14 @@ init({
 
 const coinbaseWalletSdk = coinbaseWalletModule();
 const walletConnect = walletConnectModule();
+const gnosis = gnosisModule();
 
 const onboard = Onboard({
   wallets: [
     injected,
     coinbaseWalletSdk,
-    walletConnect
+    walletConnect,
+    gnosis
   ],
   chains:[
     {
