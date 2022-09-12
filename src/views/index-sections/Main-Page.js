@@ -16,15 +16,10 @@ function MainPage() {
   return (
     <>
       <NavItem>
-              <Button
-                className="btn-round"
-                color="danger"
-                href=""
-                target="_blank"
-              >
+        <Button className="btn-round" color="danger" href="" target="_blank">
                 Connect Wallet
-              </Button>
-            </NavItem>
+        </Button>
+      </NavItem>
     </>
   );
 }
