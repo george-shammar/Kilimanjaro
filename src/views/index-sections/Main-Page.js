@@ -42,12 +42,12 @@ init({
   ]
 })
 
-// const coinbaseWalletSdk = coinbaseWalletSdk();
 const coinbaseWalletSdk = coinbaseWalletModule();
 const walletConnect = walletConnectModule();
 
 const onboard = Onboard({
   wallets: [
+    injected,
     coinbaseWalletSdk,
     walletConnect
   ],
