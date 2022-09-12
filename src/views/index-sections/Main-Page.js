@@ -8,7 +8,6 @@ import Onboard from '@web3-onboard/core';
 import coinbaseWalletModule from '@web3-onboard/coinbase';
 import walletConnectModule from '@web3-onboard/walletconnect';
 import gnosisModule from '@web3-onboard/gnosis';
-import torusModule from '@web3-onboard/torus';
 import { ethers } from 'ethers';
 import "../../assets/css/custom.css"
 
@@ -47,7 +46,6 @@ init({
 const coinbaseWalletSdk = coinbaseWalletModule();
 const walletConnect = walletConnectModule();
 const gnosis = gnosisModule();
-const torus = torusModule();
 
 const onboard = Onboard({
   wallets: [
@@ -55,7 +53,6 @@ const onboard = Onboard({
     coinbaseWalletSdk,
     walletConnect,
     gnosis,
-    torus
   ],
   chains:[
     {
