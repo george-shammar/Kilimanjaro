@@ -6,10 +6,16 @@ const NFT_STORAGE_KEY = 'NFT_STORAGE_KEY';
 const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
 
 function Tree() {
-  const [formInput, updateFormInput] = useState({name:""});
+  const [formInput, updateFormInput] = useState({coordinate:""});
   const [status, setStatus] = useState("");
 
   async function mintTree() {
+    const {coordinate} = formInput;
+      if (!coordinate) {
+        setStatus("Input coordinate");
+      }
+
+
 
   }
 
