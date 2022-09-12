@@ -134,16 +134,16 @@ function MainPage() {
                 <i className="nc-icon nc-book-bookmark" /> DOCS
               </NavLink>
             </NavItem>
-            <Link to="/MainPage"><NavItem>
+            <NavItem>
               <Button
                 className="btn-round"
                 color="danger"
                 href=""
                 target="_blank"
               >
-                Get Started
+                Connect wallet
               </Button>
-            </NavItem></Link>
+            </NavItem>
           </Nav>
         </Collapse>
       </Container>
