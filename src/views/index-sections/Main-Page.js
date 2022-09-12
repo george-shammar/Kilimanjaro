@@ -22,6 +22,14 @@ import {
 const injected = injectedModule();
 const rpcApiKey = '<ALCHEMY_KEY>' || '<INFURA_KEY>'
 const rpcUrl = `https://eth-mainnet.g.alchemy.com/v2/${rpcApiKey}` || `https://mainnet.infura.io/v3/${rpcApiKey}`
+
+// initialize Onboard
+init({
+  wallets: [injected],
+})
+
+
+
 // core components
 
 function MainPage() {
