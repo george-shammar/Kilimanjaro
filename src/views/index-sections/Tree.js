@@ -11,3 +11,5 @@ function Tree() {
     </div>
   )
 }
+
+export default Tree;
