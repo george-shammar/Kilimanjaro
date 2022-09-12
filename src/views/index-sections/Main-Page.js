@@ -164,23 +164,18 @@ function MainPage() {
             </NavItem>
             <NavItem>
               <Button
+                disabled={connecting} onClick={() => (wallet ? disconnect() : connect())}
                 className="btn-round"
                 color="danger"
                 href=""
                 target="_blank"
               >
-                Connect wallet
+                {connecting ? 'connecting' : wallet ? 'disconnect' : 'connect'}
               </Button>
             </NavItem>
           </Nav>
         </Collapse>
       </Container>
-
-      <div>
-        <button disabled={connecting} onClick={() => (wallet ? disconnect() : connect())}>
-            {connecting ? 'connecting' : wallet ? 'disconnect' : 'connect'}
-        </button>
-      </div>
     </Navbar>
   );
   
