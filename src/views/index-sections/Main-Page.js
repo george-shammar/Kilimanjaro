@@ -8,6 +8,7 @@ import Onboard from '@web3-onboard/core';
 import coinbaseWalletModule from '@web3-onboard/coinbase';
 import walletConnectModule from '@web3-onboard/walletconnect';
 import { ethers } from 'ethers';
+import Tree from "./Tree";
 import "../../assets/css/custom.css"
 
 
@@ -111,6 +112,10 @@ function MainPage() {
 
 
   return (
+    <div>
+      <div>
+
+      
     <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
       <Container>
         <div className="navbar-translate">
@@ -207,6 +212,10 @@ function MainPage() {
         </Collapse>
       </Container>
     </Navbar>
+    </div>
+    
+    <Tree />
+    </div>
   );
   
   
