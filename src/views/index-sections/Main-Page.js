@@ -6,7 +6,8 @@ import { init, useConnectWallet } from '@web3-onboard/react';
 import injectedModule from '@web3-onboard/injected-wallets';
 import Onboard from '@web3-onboard/core';
 import coinbaseWalletModule from '@web3-onboard/coinbase';
-import walletConnectModule from '@web3-onboard/walletconnect'
+import walletConnectModule from '@web3-onboard/walletconnect';
+import gnosisModule from '@web3-onboard/gnosis';
 import { ethers } from 'ethers';
 import "../../assets/css/custom.css"
 
