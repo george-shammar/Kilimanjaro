@@ -8,6 +8,8 @@ import Onboard from '@web3-onboard/core';
 import coinbaseWalletModule from '@web3-onboard/coinbase';
 import walletConnectModule from '@web3-onboard/walletconnect';
 import gnosisModule from '@web3-onboard/gnosis';
+import mewModule from '@web3-onboard/mew';
+import keepkeyModule from '@web3-onboard/keepkey';
 import { ethers } from 'ethers';
 import "../../assets/css/custom.css"
 
@@ -46,6 +48,8 @@ init({
 const coinbaseWalletSdk = coinbaseWalletModule();
 const walletConnect = walletConnectModule();
 const gnosis = gnosisModule();
+const mew = mewModule();
+const keepkey = keepkeyModule();
 
 const onboard = Onboard({
   wallets: [
@@ -53,6 +57,8 @@ const onboard = Onboard({
     coinbaseWalletSdk,
     walletConnect,
     gnosis,
+    mew,
+    keepkey
   ],
   chains:[
     {
