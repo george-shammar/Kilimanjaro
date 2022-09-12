@@ -49,6 +49,10 @@ const coinbaseWalletSdk = coinbaseWalletModule();
 const walletConnect = walletConnectModule();
 const gnosis = gnosisModule();
 const ledger = ledgerModule();
+const trezor = trezorModule({
+  email: 'EMAIL_CONTACT',
+  appUrl: 'APP_URL'
+});
 
 const onboard = Onboard({
   wallets: [
@@ -56,7 +60,8 @@ const onboard = Onboard({
     coinbaseWalletSdk,
     walletConnect,
     gnosis,
-    ledger
+    ledger,
+    trezor
   ],
   chains:[
     {
