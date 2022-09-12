@@ -9,6 +9,7 @@ import coinbaseWalletModule from '@web3-onboard/coinbase';
 import walletConnectModule from '@web3-onboard/walletconnect';
 import gnosisModule from '@web3-onboard/gnosis';
 import ledgerModule from '@web3-onboard/ledger';
+import trezorModule from '@web3-onboard/trezor';
 import { ethers } from 'ethers';
 import "../../assets/css/custom.css"
 
