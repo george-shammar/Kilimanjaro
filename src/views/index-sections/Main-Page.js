@@ -6,10 +6,11 @@ import { init, useConnectWallet } from '@web3-onboard/react';
 import injectedModule from '@web3-onboard/injected-wallets';
 import Onboard from '@web3-onboard/core';
 import coinbaseWalletModule from '@web3-onboard/coinbase';
+import walletConnectModule from '@web3-onboard/walletconnect'
 import { ethers } from 'ethers';
 import "../../assets/css/custom.css"
 
-const coinbaseWalletSdk = coinbaseWalletSdk();
+
 
 // reactstrap components
 import {
@@ -40,6 +41,13 @@ init({
     }
   ]
 })
+const coinbaseWalletSdk = coinbaseWalletSdk();
+const onboard = Onboard({
+  wallets: [
+    coinbaseWalletSdk
+  ]
+})
+
 
 // core components
 
@@ -56,6 +64,10 @@ function MainPage() {
     ethersProvider = new ethers.providers.Web3Provider(wallet.provider, 'any')
   }
 
+  async function connectWallet() {
+    const connectedWallets = await onboard.connectWallet();
+    console.log(connectedWallets);
+  }
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
@@ -168,7 +180,8 @@ function MainPage() {
             </NavItem>
             <NavItem>
               <Button
-                disabled={connecting} onClick={() => (wallet ? disconnect() : connect())}
+                // disabled={connecting} onClick={() => (wallet ? disconnect() : connect())}
+                disabled={connecting} onClick = {() => connectWallet()}
                 className="btn-round"
                 color="danger"
                 href=""
