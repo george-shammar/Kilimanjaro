@@ -8,6 +8,7 @@ import Onboard from '@web3-onboard/core';
 import coinbaseWalletModule from '@web3-onboard/coinbase';
 import walletConnectModule from '@web3-onboard/walletconnect';
 import gnosisModule from '@web3-onboard/gnosis';
+import ledgerModule from '@web3-onboard/ledger';
 import { ethers } from 'ethers';
 import "../../assets/css/custom.css"
 
@@ -46,13 +47,15 @@ init({
 const coinbaseWalletSdk = coinbaseWalletModule();
 const walletConnect = walletConnectModule();
 const gnosis = gnosisModule();
+const ledger = ledgerModule();
 
 const onboard = Onboard({
   wallets: [
     injected,
     coinbaseWalletSdk,
     walletConnect,
-    gnosis
+    gnosis,
+    ledger
   ],
   chains:[
     {
