@@ -4,6 +4,7 @@ import React from "react";
 import classnames from "classnames";
 import { init, useConnectWallet } from '@web3-onboard/react';
 import injectedModule from '@web3-onboard/injected-wallets';
+import Onboard from '@web3-onboard/core';
 import { ethers } from 'ethers';
 import "../../assets/css/custom.css"
 
