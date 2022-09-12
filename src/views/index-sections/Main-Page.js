@@ -174,6 +174,10 @@ function MainPage() {
           </Nav>
         </Collapse>
       </Container>
+
+      <div>
+        <button></button>
+      </div>
     </Navbar>
   );
   
