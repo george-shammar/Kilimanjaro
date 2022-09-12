@@ -34,17 +34,30 @@ init({
   wallets: [injected],
   chains:[
     {
-      id: '0x1',
-      token: 'ETH',
-      label: 'Ethereum Mainnet',
+      id: '0x3',
+      token: 'tROP',
+      label: 'Ethereum Ropsten Testnet',
       rpcUrl
     }
   ]
 })
-const coinbaseWalletSdk = coinbaseWalletSdk();
+
+// const coinbaseWalletSdk = coinbaseWalletSdk();
+const coinbaseWalletSdk = coinbaseWalletModule();
+// const walletConnect = walletConnectModule();
+
 const onboard = Onboard({
   wallets: [
     coinbaseWalletSdk
+    // walletConnect
+  ],
+  chains:[
+    {
+      id: '0x3',
+      token: 'tROP',
+      label: 'Ethereum Ropsten Testnet',
+      rpcUrl
+    }
   ]
 })
 
