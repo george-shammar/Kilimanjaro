@@ -2,7 +2,8 @@
 /*eslint-disable*/
 import React from "react";
 import classnames from "classnames";
-import { init, useConnectWallet } from '@web3-onboard/react'
+import { init, useConnectWallet } from '@web3-onboard/react';
+import injectedModule from '@web3-onboard/injected-wallets';
 import "../../assets/css/custom.css"
 
 // reactstrap components
