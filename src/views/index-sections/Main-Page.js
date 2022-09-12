@@ -20,8 +20,9 @@ import {
 } from "reactstrap";
 
 const injected = injectedModule();
-const rpcApiKey = '<ALCHEMY_KEY>' || '<INFURA_KEY>'
-const rpcUrl = `https://eth-mainnet.g.alchemy.com/v2/${rpcApiKey}` || `https://mainnet.infura.io/v3/${rpcApiKey}`
+const rpcApiKey = 'ALCHEMY_KEY' || 'INFURA_KEY'
+// const rpcUrl = `https://eth-mainnet.g.alchemy.com/v2/${rpcApiKey}` || `https://mainnet.infura.io/v3/${rpcApiKey}`
+const rpcUrl = `https://eth-ropsten.alchemyapi.io/v2/${rpcApiKey}` || `https://ropsten.infura.io/v3/${rpcApiKey}`
 
 // initialize Onboard
 init({
@@ -176,7 +177,9 @@ function MainPage() {
       </Container>
 
       <div>
-        <button></button>
+        <button disabled={connecting} onClick={() => (wallet ? disconnect() : connect())}>
+            {connecting ? 'connecting' : wallet ? 'disconnect' : 'connect'}
+        </button>
       </div>
     </Navbar>
   );
