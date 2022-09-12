@@ -26,6 +26,14 @@ const rpcUrl = `https://eth-mainnet.g.alchemy.com/v2/${rpcApiKey}` || `https://m
 // initialize Onboard
 init({
   wallets: [injected],
+  chains:[
+    {
+      id: '0x1',
+      token: 'ETH',
+      label: 'Ethereum Mainnet',
+      rpcUrl
+    }
+  ]
 })
 
 
