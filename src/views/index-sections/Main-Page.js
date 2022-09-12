@@ -9,6 +9,8 @@ import coinbaseWalletModule from '@web3-onboard/coinbase';
 import { ethers } from 'ethers';
 import "../../assets/css/custom.css"
 
+const coinbaseWalletSdk = coinbaseWalletSdk();
+
 // reactstrap components
 import {
   Button,
