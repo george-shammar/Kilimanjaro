@@ -1,6 +1,7 @@
 
 /*eslint-disable*/
 import React from "react";
+import IndexNavbar from "../../components/Navbars/IndexNavbar";
 import "../../assets/css/custom.css"
 
 // reactstrap components
