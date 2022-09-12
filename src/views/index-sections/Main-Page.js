@@ -39,13 +39,18 @@ init({
 // core components
 
 function MainPage() {
-  const [{ wallet, connecting }, connect, disconnect] = useConnectWallet();
-
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
+  const [{ wallet, connecting }, connect, disconnect] = useConnectWallet();
+
   // create an ethers provider
   let ethersProvider;
+
+  if (wallet) {
+    ethersProvider = new ethers.providers.Web3Provider(wallet.provider, 'any')
+  }
+
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
