@@ -38,7 +38,7 @@ function Tree() {
         image: new File(['./assets/dude.jpeg'], 'dude.jpeg', { type: 'image/jpg' })
       });
 
-      setStatus(`Minting token with metadata URI: ${metadata.url}`);
+      setStatus(`Creating a tree with metadata URI: ${metadata.url}`);
 
       const metadataURI = metadata.url;
       
