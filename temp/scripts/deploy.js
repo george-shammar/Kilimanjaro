@@ -70,7 +70,7 @@ async function main() {
   await tree.deployed();
 
   console.log(
-    `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+    `tree contract deployed to ${tree.address}`
   );
 }
 
