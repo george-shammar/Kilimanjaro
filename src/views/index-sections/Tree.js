@@ -44,7 +44,7 @@ function Tree() {
       
       const transaction = await contract.createRandomMage(species, metadataURI, datePlanted, geoLocation, Longitude, Latitude);
 
-      setStatus("Blockchain transaction sent, awaiting confirmation...");
+      setStatus("On-chain tree creating transaction sent, awaiting confirmation...");
 
       const receipt = await transaction.wait();
       if (receipt.status === 0) {
