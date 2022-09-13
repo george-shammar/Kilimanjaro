@@ -7,19 +7,62 @@
 const hre = require("hardhat");
 
 async function main() {
-  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
-  const unlockTime = currentTimestampInSeconds + ONE_YEAR_IN_SECS;
+  const [deployer] = await ethers.getSigners();
 
-  const lockedAmount = hre.ethers.utils.parseEther("1");
+  console.log("Deploying contracts with the account:", deployer.address);
 
-  const Lock = await hre.ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
+  console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  await lock.deployed();
+  const Tree = await ethers.getContractFactory("Tree");
+  const tree = await Tree.deploy();
+
+  console.log("Tree address:", tree.address);
+
+  //  To save the contract's artifacts and address in the frontend directory
+  saveFrontendFiles(tree);
+}
+
+function saveFrontendFiles(tree) {
+  const fs = require("fs");
+  const contractsDir = __dirname + "/../src/contracts";
+
+  if (!fs.existsSync(contractsDir)) {
+    fs.mkdirSync(contractsDir);
+  }
+
+  fs.writeFileSync(
+    contractsDir + "/contract-address.json",
+    JSON.stringify({ Tree: tree.address }, undefined, 2)
+  );
+
+  const TreeArtifact = artifacts.readArtifactSync("Tree");
+
+  fs.writeFileSync(
+    contractsDir + "/Tree.json",
+    JSON.stringify(TreeArtifact, null, 2)
+  );
+}
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+
+
+  
+async function main() {
+
+  const token = '0x70997970C51812dc3A010C7d01b50e0d17dc79C8';
+
+  const Kilimanjaro = await hre.ethers.getContractFactory("Kilimanjaro");
+  const kilimanjaro = await Kilimanjaro.deploy(token);
+
+  await kilimanjaro.deployed();
 
   console.log(
-    `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+    `Kilimanjaro contract deployed to ${kilimanjaro.address}`
   );
 }
 
