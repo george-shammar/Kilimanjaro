@@ -42,7 +42,7 @@ function Tree() {
 
       const metadataURI = metadata.url;
       
-      const transaction = await contract.createRandomMage(name, metadataURI, { value: mintingPrice });
+      const transaction = await contract.createRandomMage(species, metadataURI, datePlanted, geoLocation, Longitude, Latitude);
 
       setStatus("Blockchain transaction sent, awaiting confirmation...");
 
