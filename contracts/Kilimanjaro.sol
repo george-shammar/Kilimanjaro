@@ -16,14 +16,14 @@ contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
   struct Tree {
     uint256 id;
     string species;
-    uint256 datePlanted;
+    string datePlanted;
     string geoLocation;
     string longitude;
     string latitude;
     uint256 CO2Credit;
   }
 
-  event NewTree(uint256 id, string species, uint256 datePlanted, string geoLocation, string longitude, string latitude, uint256 CO2Credit);
+  event NewTree(uint256 id, string species, string datePlanted, string geoLocation, string longitude, string latitude, uint256 CO2Credit);
 
   Tree[] public trees;
 
@@ -32,7 +32,7 @@ contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
   }
 
   // Create
-  function _createTree(string memory _species, string memory tokenURI, uint256 _datePlanted, string memory _geoLocation, string memory longitude, string memory latitude, uint256 CO2Credit) internal {
+  function _createTree(string memory _species, string memory tokenURI, string memory _datePlanted, string memory _geoLocation, string memory longitude, string memory latitude, uint256 CO2Credit) internal {
         Tree memory newTree = Tree(COUNTER, _species, _datePlanted, _geoLocation, longitude, latitude, CO2Credit);
         trees.push(newTree);
         _safeMint(msg.sender, COUNTER);
@@ -41,8 +41,7 @@ contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
         COUNTER++;
   }
 
-//make non-payable
-  function createTree(string memory _species, string memory tokenURI, uint256 _datePlanted, string memory _geoLocation, string memory longitude, string memory latitude) public payable whenNotPaused onlyOwner {
+  function createTree(string memory _species, string memory tokenURI, string memory _datePlanted, string memory _geoLocation, string memory longitude, string memory latitude) public whenNotPaused onlyOwner {
       _createTree(_species, tokenURI, _datePlanted, _geoLocation, longitude, latitude, 0);
   }
 
