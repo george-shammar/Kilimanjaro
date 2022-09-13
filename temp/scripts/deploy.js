@@ -67,7 +67,7 @@ async function main() {
   const Tree = await hre.ethers.getContractFactory("Tree");
   const tree = await Tree.deploy(token);
 
-  await lock.deployed();
+  await tree.deployed();
 
   console.log(
     `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
