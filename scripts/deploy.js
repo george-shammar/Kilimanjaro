@@ -22,33 +22,6 @@ async function main() {
   saveFrontendFiles(tree);
 }
 
-function saveFrontendFiles(tree) {
-  const fs = require("fs");
-  const contractsDir = __dirname + "/../src/contracts";
-
-  if (!fs.existsSync(contractsDir)) {
-    fs.mkdirSync(contractsDir);
-  }
-
-  fs.writeFileSync(
-    contractsDir + "/contract-address.json",
-    JSON.stringify({ Tree: tree.address }, undefined, 2)
-  );
-
-  const TreeArtifact = artifacts.readArtifactSync("Tree");
-
-  fs.writeFileSync(
-    contractsDir + "/Tree.json",
-    JSON.stringify(TreeArtifact, null, 2)
-  );
-}
-
-main()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
 
 
   
@@ -63,6 +36,29 @@ async function main() {
 
   console.log(
     `Kilimanjaro contract deployed to ${kilimanjaro.address}`
+  );
+
+  saveFrontendFiles(kilimanjaro);
+}
+
+function saveFrontendFiles(kilimanjaro) {
+  const fs = require("fs");
+  const contractsDir = __dirname + "/../src/contracts";
+
+  if (!fs.existsSync(contractsDir)) {
+    fs.mkdirSync(contractsDir);
+  }
+
+  fs.writeFileSync(
+    contractsDir + "/contract-address.json",
+    JSON.stringify({ Kilimanjaro: kilimanjaro.address }, undefined, 2)
+  );
+
+  const KilimanjaroArtifact = artifacts.readArtifactSync("Kilimanjaro");
+
+  fs.writeFileSync(
+    contractsDir + "/Kilimanjaro.json",
+    JSON.stringify(KilimanjaroArtifact, null, 2)
   );
 }
 
