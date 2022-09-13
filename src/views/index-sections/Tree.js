@@ -68,33 +68,15 @@ function Tree() {
 
   return (
     <div>
-
-
-      <div>
       
       <div className="border">
-        <input 
-          className="py-1" 
-          placeholder="Species"
-          required
-          onChange={e => updateSpeciesInput({...speciesInput, name: e.target.value})}  
-        />
-        <div className="white mt-3">
-          <p>ID: To be revealed</p>
-          <p>DNA: To be revealed</p>
-          <p>Rarity: To be revealed</p>
-          <p>Level: To be revealed</p>
-          <p>Description/Powers: To be reveealed</p>
-        </div>
+        <input className="py-1" placeholder="Species" required onChange={e => updateSpeciesInput({...speciesInput, name: e.target.value})}  />
+        
           <button className="py-2 submit white" onClick={mintMage}>
-              Mint Mage
+            Tokenize Tree
           </button>
         </div>
-
-      </div>
-      <button>
-        Plant Tree
-      </button>
+     
     </div>
   )
 }
