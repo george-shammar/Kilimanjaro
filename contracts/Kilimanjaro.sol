@@ -41,6 +41,7 @@ contract Kilimanjaro is ERC721URIStorage, Pausable, Ownable{
         COUNTER++;
   }
 
+//make non-payable
   function createTree(string memory _species, string memory tokenURI, uint256 _datePlanted, string memory _geoLocation, string memory longitude, string memory latitude) public payable whenNotPaused onlyOwner {
       _createTree(_species, tokenURI, _datePlanted, _geoLocation, longitude, latitude, 0);
   }
