@@ -50,7 +50,7 @@ function Tree() {
       if (receipt.status === 0) {
           throw new Error("Transaction failed");
       } else {
-        setStatus("Congratulations. Tree tokenized.");
+        setStatus("Tree tokenization successful.");
       }
     } catch (error) {
       if (error.code === ERROR_CODE_TX_REJECTED_BY_USER) {
@@ -63,6 +63,8 @@ function Tree() {
 
 
   }
+
+  const confirmedStatus =  "Tree tokenization successful.";
 
   return (
     <div>
