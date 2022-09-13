@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import contractAddress from "../../contracts/contract-address.json";
 import { NFTStorage, File } from 'nft.storage';
+import KilimanjaroArtifact from "../../contracts/Kilimanjaro.json";
 
 const NFT_STORAGE_KEY = 'NFT_STORAGE_KEY';
 const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
