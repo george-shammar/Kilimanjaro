@@ -22,9 +22,44 @@ function Tree() {
     const {Longitude} = LongitudeInput;
     const {Latitude} = LatitudeInput;
 
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(contractAddress.Kilimanjaro, KilimanjaroArtifact.abi, signer);
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+    const contract = new ethers.Contract(contractAddress.Kilimanjaro, KilimanjaroArtifact.abi, signer);
+
+    try {
+      const client = new NFTStorage({ token: NFT_STORAGE_KEY });
+      setStatus("Uploading to nft.storage...")
+      const metadata = await client.store({
+        species,
+        datePlanted,
+        geoLocation,
+        Longitude,
+        Latitude,
+        image: new File(['./assets/dude.jpeg'], 'dude.jpeg', { type: 'image/jpg' })
+      });
+
+      setStatus(`Minting token with metadata URI: ${metadata.url}`);
+
+      const metadataURI = metadata.url;
+      
+      const transaction = await contract.createRandomMage(name, metadataURI, { value: mintingPrice });
+
+      setStatus("Blockchain transaction sent, awaiting confirmation...");
+
+      const receipt = await transaction.wait();
+      if (receipt.status === 0) {
+          throw new Error("Transaction failed");
+      } else {
+        setStatus("Fresh Mage minted successfully! Reveal your Mage with the button below to start the game");
+      }
+    } catch (error) {
+      if (error.code === ERROR_CODE_TX_REJECTED_BY_USER) {
+        return;
+      }
+      console.error(error);
+    } finally {
+
+    }
 
 
   }
