@@ -70,13 +70,15 @@ function Tree() {
   return (
     <div>
 
-      <div className="border">
-        <input className="py-1" placeholder="Species" required onChange={e => updateSpeciesInput({...speciesInput, name: e.target.value})}  />
+       <div className="border">
+        <input className="py-1" placeholder="Species" required onChange={e => updateSpeciesInput({...speciesInput, species: e.target.value})} />
         
           <button className="py-2 submit white" onClick={mintTree}>
             Tokenize Tree
           </button>
         </div>
+
+        
 
     <div>
     {status ===  confirmedStatus ? (
