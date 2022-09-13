@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ethers } from "ethers";
 import contractAddress from "../../contracts/contract-address.json";
 import { NFTStorage, File } from 'nft.storage';
 import KilimanjaroArtifact from "../../contracts/Kilimanjaro.json";
+import { Link } from 'react-router-dom';
 
 const NFT_STORAGE_KEY = 'NFT_STORAGE_KEY';
 const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
@@ -31,11 +32,11 @@ function Tree() {
       setStatus("Uploading to nft.storage...")
       const metadata = await client.store({
         species,
-        datePlanted,
-        geoLocation,
-        Longitude,
-        Latitude,
-        image: new File(['./assets/dude.jpeg'], 'dude.jpeg', { type: 'image/jpg' })
+        datePlanted: '09/09/2022',
+        geoLocation: 'ilorin',
+        Longitude: '2323523523',
+        Latitude: '435335453',
+        // image: new File(['./assets/dude.jpeg'], 'dude.jpeg', { type: 'image/jpg' })
       });
 
       setStatus(`Creating a tree with metadata URI: ${metadata.url}`);
@@ -76,6 +77,14 @@ function Tree() {
             Tokenize Tree
           </button>
         </div>
+
+    <div>
+    {status ===  confirmedStatus ? (
+      <Link to="/index"><button>See Your Trees</button></Link>
+    ) : (
+      <p className="py-3">See your trees after confirmation... </p>
+    )}
+    </div>
      
     </div>
   )
