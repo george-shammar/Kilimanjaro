@@ -213,8 +213,10 @@ function MainPage() {
       </Container>
     </Navbar>
     </div>
-    
+    <div>
     <Tree />
+    </div>
+  
     </div>
   );
   

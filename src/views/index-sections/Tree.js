@@ -1,12 +1,15 @@
+import React from "react";
 import { useState } from "react";
 import { ethers } from "ethers";
 import contractAddress from "../../contracts/contract-address.json";
 import { NFTStorage, File } from 'nft.storage';
 import KilimanjaroArtifact from "../../contracts/Kilimanjaro.json";
-import { Link } from 'react-router-dom';
+import { Button} from "reactstrap";
 
 const NFT_STORAGE_KEY = 'NFT_STORAGE_KEY';
 const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
+
+
 
 function Tree() {
   const [speciesInput, updateSpeciesInput] = useState({species:""});
@@ -16,7 +19,13 @@ function Tree() {
   const [LatitudeInput, updateLatitudeInput] = useState({Latitude:""});
   const [status, setStatus] = useState("");
 
+
+  function click() {
+    console.log('hi')
+  }
+
   async function mintTree() {
+    console.log('hello')
     const {species} = speciesInput;
     const {datePlanted} = datePlantedInput;
     const {geoLocation} = geoLocationInput;
@@ -31,7 +40,7 @@ function Tree() {
       const client = new NFTStorage({ token: NFT_STORAGE_KEY });
       setStatus("Uploading to nft.storage...")
       const metadata = await client.store({
-        species,
+        species: 'dogoyaro',
         datePlanted: '09/09/2022',
         geoLocation: 'ilorin',
         Longitude: '2323523523',
@@ -71,23 +80,35 @@ function Tree() {
     <div>
 
        <div className="border">
-        <input className="py-1" placeholder="Species" required onChange={e => updateSpeciesInput({...speciesInput, species: e.target.value})} />
+        {/* <input className="py-1" placeholder="Species" required onChange={e => updateSpeciesInput({...speciesInput, species: e.target.value})} /> */}
         
-          <button className="py-2 submit white" onClick={mintTree}>
+          {/* <button className="py-2 submit white" onClick={mintTree}>
             Tokenize Tree
-          </button>
+          </button> */}
         </div>
 
         
-
+{/* 
     <div>
     {status ===  confirmedStatus ? (
       <Link to="/index"><button>See Your Trees</button></Link>
     ) : (
       <p className="py-3">See your trees after confirmation... </p>
     )}
-    </div>
-     
+    </div> */}
+
+
+   
+    <Button
+                className="btn-round"
+                color="danger"
+                href=""
+                target="_blank"
+               onClick={click}
+              >
+                Tokenize
+    </Button>
+   
     </div>
   )
 }
