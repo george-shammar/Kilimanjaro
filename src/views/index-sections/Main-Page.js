@@ -9,6 +9,7 @@ import coinbaseWalletModule from '@web3-onboard/coinbase';
 import walletConnectModule from '@web3-onboard/walletconnect';
 import { ethers } from 'ethers';
 import Tree from "./Tree";
+import Thentic from "./Thentic";
 import "../../assets/css/custom.css"
 
 
@@ -214,7 +215,8 @@ function MainPage() {
     </Navbar>
     </div>
     <div>
-    <Tree />
+    {/* <Tree /> */}
+    <Thentic />
     </div>
   
     </div>
